@@ -458,11 +458,11 @@ a:focus {
 @media (max-width: 600px) {
     .gallery-photo {
         width: 98vw;
-        height: 180px;
+        height: 240px;
         max-width: 98vw;
-        max-height: 30vh;
+        max-height: 45vh;
     }
     .gallery-rotator {
-        min-height: 220px;
+        min-height: 260px;
     }
 }

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta name="description" content="Sai Anung Say's Portfolio - Sales & Marketing Manager">
+    <meta name="description" content="Sai Aung Say's Portfolio - Sales & Marketing Manager">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
@@ -10,16 +10,20 @@
 <body>
     <nav class="navbar">
         <div class="container">
-            <a href="#" class="logo">Sai Anung Say</a>
+            <a href="#" class="logo">Sai Aung Say</a>
+            <div class="lang-switcher" style="position:absolute; top:16px; right:24px; display:flex; gap:8px; z-index:300;">
+                <img src="flag-en.png" alt="English" class="flag-btn" id="flag-en" style="width:32px; height:22px; cursor:pointer; border-radius:4px; border:2px solid #1976d2;">
+                <img src="flag-cn.png" alt="中文" class="flag-btn" id="flag-cn" style="width:32px; height:22px; cursor:pointer; border-radius:4px; border:2px solid transparent;">
+            </div>
             <button class="nav-toggle" aria-label="Toggle navigation">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
             <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#about" class="nav-about">About</a></li>
+                <li><a href="#gallery" class="nav-gallery">Gallery</a></li>
+                <li><a href="#contact" class="nav-contact">Contact</a></li>
             </ul>
         </div>
     </nav>
@@ -27,12 +31,15 @@
     <section class="hero">
         <div class="hero-content">
             <div class="hero-text">
-                <h1>Hello, I'm Sai Anung Say (Say)</h1>
-                <p>I'm a Sales & Marketing Manager with a passion for connecting people and driving business growth through creative strategies and digital solutions.</p>
-                <a href="mailto:ookk1520@gmail.com" class="btn-primary" target="_blank">Contact Me</a>
+                <h1 class="hero-title-en">Hello, I'm Sai Aung Say (Say)</h1>
+                <h1 class="hero-title-cn" style="display:none;">你好，我是赛昂赛（Say）</h1>
+                <p class="hero-desc-en">I'm a Sales & Marketing Manager with a passion for connecting people and driving business growth through creative strategies and digital solutions.</p>
+                <p class="hero-desc-cn" style="display:none;">我是一名销售与市场经理，热衷于通过创新策略和数字化方案连接人与人，推动业务增长。</p>
+                <a href="mailto:ookk1520@gmail.com" class="btn-primary hero-contact-en" target="_blank">Contact Me</a>
+                <a href="mailto:ookk1520@gmail.com" class="btn-primary hero-contact-cn" style="display:none;" target="_blank">联系我</a>
             </div>
             <div class="hero-photo">
-                <img src="logo1.jpg" alt="Sai Anung Say" style="width:180px; height:180px; border-radius:50%; box-shadow:0 4px 16px rgba(0,0,0,0.12); background:#fff; object-fit:cover;">
+                <img src="logo1.jpg" alt="Sai Aung Say" style="width:180px; height:180px; border-radius:50%; box-shadow:0 4px 16px rgba(0,0,0,0.12); background:#fff; object-fit:cover;">
             </div>
         </div>
     </section>
@@ -40,25 +47,38 @@
     <section id="about" class="content-section active">
         <div class="container about-rotator">
             <div class="about-page about-page-0 active">
-                <h2>About Me</h2>
-                <p>
-                    I am Sai Anung Say (nick name: Say), a Sales & Marketing Manager with experience in building brands, leading teams, and delivering results in competitive markets. I enjoy collaborating, solving business challenges, and learning new trends in marketing and sales.
+                <h2 class="about-title">About Me</h2>
+                <p class="about-desc-en">
+                    I am Sai Aung Say (nick name: Say), a Sales & Marketing Manager with experience in building brands, leading teams, and delivering results in competitive markets. I enjoy collaborating, solving business challenges, and learning new trends in marketing and sales.
+                </p>
+                <p class="about-desc-cn" style="display:none;">
+                    我是赛昂赛（昵称：Say），一名销售与市场经理，拥有丰富的品牌建设、团队管理和市场竞争经验。我热爱协作，善于解决业务难题，并乐于学习营销和销售领域的新趋势。
                 </p>
             </div>
             <div class="about-page about-page-1">
-                <h2>Skills</h2>
-                <ul>
+                <h2 class="skills-title">Skills</h2>
+                <ul class="skills-list-en">
                     <li>Strategic Planning</li>
                     <li>Digital Marketing</li>
                     <li>SEO & SEM</li>
                     <li>Content Creation</li>
                     <li>Data Analysis</li>
                 </ul>
+                <ul class="skills-list-cn" style="display:none;">
+                    <li>战略规划</li>
+                    <li>数字营销</li>
+                    <li>搜索引擎优化与营销</li>
+                    <li>内容创作</li>
+                    <li>数据分析</li>
+                </ul>
             </div>
             <div class="about-page about-page-2">
-                <h2>Interests</h2>
-                <p>
+                <h2 class="interests-title">Interests</h2>
+                <p class="interests-desc-en">
                     I love exploring new marketing technologies, reading about industry trends, and hiking in nature. I'm also interested in AI and how it's shaping the future of business.
+                </p>
+                <p class="interests-desc-cn" style="display:none;">
+                    我喜欢探索新的营销技术，阅读行业趋势，并热爱户外徒步。同时我也对人工智能及其如何影响商业未来充满兴趣。
                 </p>
             </div>
         </div>
@@ -72,32 +92,39 @@
     <section id="gallery" class="content-section">
         <div class="container gallery-rotator">
             <div class="gallery-page gallery-page-0 active">
-                <img src="gallery1.jpg" alt="Gallery Photo 1" class="gallery-photo" data-full="gallery1.jpg">
-                <p>Photo 1: Team building event at the annual sales summit.</p>
+                <img src="gallery1.jpg" alt="Gallery Photo 1" class="gallery-photo">
+                <p class="gallery-desc-en">"A healthy body is the best outfit you can wear."</p>
+                <p class="gallery-desc-cn" style="display:none;">“健康的身体是你最美的衣裳。”</p>
             </div>
             <div class="gallery-page gallery-page-1">
-                <img src="gallery2.jpg" alt="Gallery Photo 2" class="gallery-photo" data-full="gallery2.jpg">
-                <p>Photo 2: Presenting at a marketing conference in 2024.</p>
+                <img src="gallery2.jpg" alt="Gallery Photo 2" class="gallery-photo">
+                <p class="gallery-desc-en">"Even the smallest bird can fill your heart with the greatest joy."</p>
+                <p class="gallery-desc-cn" style="display:none;">“哪怕是最小的鸟儿，也能带来最大的快乐。”</p>
             </div>
             <div class="gallery-page gallery-page-2">
-                <img src="gallery3.jpg" alt="Gallery Photo 3" class="gallery-photo" data-full="gallery3.jpg">
-                <p>Photo 3: Launching a new product campaign.</p>
+                <img src="gallery3.jpg" alt="Gallery Photo 3" class="gallery-photo">
+                <p class="gallery-desc-en">"The beauty of life is often found in the gentle song of a small bird."</p>
+                <p class="gallery-desc-cn" style="display:none;">“生活的美好，常常藏在小鸟的轻吟中。”</p>
             </div>
             <div class="gallery-page gallery-page-3">
-                <img src="gallery4.jpg" alt="Gallery Photo 4" class="gallery-photo" data-full="gallery4.jpg">
-                <p>Photo 4: Meeting with international partners.</p>
+                <img src="gallery4.jpg" alt="Gallery Photo 4" class="gallery-photo">
+                <p class="gallery-desc-en">"To love a small bird is to cherish the simple wonders of nature."</p>
+                <p class="gallery-desc-cn" style="display:none;">“爱一只小鸟，就是珍惜大自然的简单美好。”</p>
             </div>
             <div class="gallery-page gallery-page-4">
-                <img src="gallery5.jpg" alt="Gallery Photo 5" class="gallery-photo" data-full="gallery5.jpg">
-                <p>Photo 5: Coordinating a digital marketing workshop.</p>
+                <img src="gallery5.jpg" alt="Gallery Photo 5" class="gallery-photo">
+                <p class="gallery-desc-en">"Family is the nest where our hearts find their home."</p>
+                <p class="gallery-desc-cn" style="display:none;">“家是心灵的港湾。”</p>
             </div>
             <div class="gallery-page gallery-page-5">
-                <img src="gallery6.jpg" alt="Gallery Photo 6" class="gallery-photo" data-full="gallery6.jpg">
-                <p>Photo 6: Celebrating a successful sales quarter.</p>
+                <img src="gallery6.jpg" alt="Gallery Photo 6" class="gallery-photo">
+                <p class="gallery-desc-en">"A small bird reminds us that happiness can be found in the tiniest moments."</p>
+                <p class="gallery-desc-cn" style="display:none;">“小鸟提醒我们，幸福常在微小的瞬间。”</p>
             </div>
             <div class="gallery-page gallery-page-6">
-                <img src="gallery7.jpg" alt="Gallery Photo 7" class="gallery-photo" data-full="gallery7.jpg">
-                <p>Photo 7: Networking at a business expo.</p>
+                <img src="gallery7.jpg" alt="Gallery Photo 7" class="gallery-photo">
+                <p class="gallery-desc-en">"Let your heart be light, like the wings of a small bird."</p>
+                <p class="gallery-desc-cn" style="display:none;">“让心灵像小鸟的翅膀一样轻盈。”</p>
             </div>
         </div>
         <div class="gallery-indicators">
@@ -109,21 +136,19 @@
             <span class="gallery-dot"></span>
             <span class="gallery-dot"></span>
         </div>
-        <div id="gallery-fullscreen" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.92); z-index:2000; align-items:center; justify-content:center;">
-            <img id="gallery-full-img" src="" alt="Full Photo" style="max-width:96vw; max-height:96vh; border-radius:1.5rem; box-shadow:0 8px 48px rgba(0,0,0,0.4);">
-        </div>
     </section>
 
     <section id="contact" class="content-section">
         <div class="container">
-            <h2>Contact</h2>
-            <p>Email: <a href="ookk1520@gmail.com">ookk1520@gmail.com</a></p>
+            <h2 class="contact-title">Contact</h2>
+            <p class="contact-desc-en">WeChat: <span style="font-weight:bold;">kyisem666</span></p>
+            <p class="contact-desc-cn" style="display:none;">微信：<span style="font-weight:bold;">kyisem666</span></p>
             <!-- You can add a contact form here if you like -->
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2025 Sai Anung Say. All rights reserved.</p>
+        <p>&copy; 2025 Sai Aung Say. All rights reserved.</p>
     </footer>
 
     <div id="chat-bubble" style="position: fixed; bottom: 40px; right: 40px; z-index: 9999; cursor: grab;">
@@ -363,42 +388,44 @@
             }
         });
 
-        // Gallery long tap to show full photo
-        const galleryFull = document.getElementById('gallery-fullscreen');
-        const galleryFullImg = document.getElementById('gallery-full-img');
-        let galleryLongPressTimer = null;
-        document.querySelectorAll('.gallery-photo').forEach(photo => {
-            // Mouse long press
-            photo.addEventListener('mousedown', function(e) {
-                galleryLongPressTimer = setTimeout(() => {
-                    galleryFullImg.src = photo.getAttribute('data-full');
-                    galleryFull.style.display = 'flex';
-                }, 500);
-            });
-            photo.addEventListener('mouseup', function(e) {
-                clearTimeout(galleryLongPressTimer);
-            });
-            photo.addEventListener('mouseleave', function(e) {
-                clearTimeout(galleryLongPressTimer);
-            });
-            // Touch long press
-            photo.addEventListener('touchstart', function(e) {
-                galleryLongPressTimer = setTimeout(() => {
-                    galleryFullImg.src = photo.getAttribute('data-full');
-                    galleryFull.style.display = 'flex';
-                }, 500);
-            }, {passive: true});
-            photo.addEventListener('touchend', function(e) {
-                clearTimeout(galleryLongPressTimer);
-            });
-            photo.addEventListener('touchmove', function(e) {
-                clearTimeout(galleryLongPressTimer);
-            });
-        });
-        galleryFull.addEventListener('click', function() {
-            galleryFull.style.display = 'none';
-            galleryFullImg.src = '';
-        });
+        // Language switcher
+        const flagEn = document.getElementById('flag-en');
+        const flagCn = document.getElementById('flag-cn');
+        function setLang(lang) {
+            // About
+            document.querySelector('.about-title').textContent = lang === 'en' ? 'About Me' : '关于我';
+            document.querySelector('.about-desc-en').style.display = lang === 'en' ? '' : 'none';
+            document.querySelector('.about-desc-cn').style.display = lang === 'cn' ? '' : 'none';
+            document.querySelector('.skills-title').textContent = lang === 'en' ? 'Skills' : '技能';
+            document.querySelector('.skills-list-en').style.display = lang === 'en' ? '' : 'none';
+            document.querySelector('.skills-list-cn').style.display = lang === 'cn' ? '' : 'none';
+            document.querySelector('.interests-title').textContent = lang === 'en' ? 'Interests' : '兴趣';
+            document.querySelector('.interests-desc-en').style.display = lang === 'en' ? '' : 'none';
+            document.querySelector('.interests-desc-cn').style.display = lang === 'cn' ? '' : 'none';
+            // Gallery
+            document.querySelectorAll('.gallery-desc-en').forEach(e => e.style.display = lang === 'en' ? '' : 'none');
+            document.querySelectorAll('.gallery-desc-cn').forEach(e => e.style.display = lang === 'cn' ? '' : 'none');
+            // Contact
+            document.querySelector('.contact-title').textContent = lang === 'en' ? 'Contact' : '联系';
+            document.querySelector('.contact-desc-en').style.display = lang === 'en' ? '' : 'none';
+            document.querySelector('.contact-desc-cn').style.display = lang === 'cn' ? '' : 'none';
+            // Nav
+            document.querySelector('.nav-about').textContent = lang === 'en' ? 'About' : '关于';
+            document.querySelector('.nav-gallery').textContent = lang === 'en' ? 'Gallery' : '相册';
+            document.querySelector('.nav-contact').textContent = lang === 'en' ? 'Contact' : '联系';
+            // Hero
+            document.querySelector('.hero-title-en').style.display = lang === 'en' ? '' : 'none';
+            document.querySelector('.hero-title-cn').style.display = lang === 'cn' ? '' : 'none';
+            document.querySelector('.hero-desc-en').style.display = lang === 'en' ? '' : 'none';
+            document.querySelector('.hero-desc-cn').style.display = lang === 'cn' ? '' : 'none';
+            document.querySelector('.hero-contact-en').style.display = lang === 'en' ? '' : 'none';
+            document.querySelector('.hero-contact-cn').style.display = lang === 'cn' ? '' : 'none';
+            // Flag highlight
+            flagEn.style.border = lang === 'en' ? '2px solid #1976d2' : '2px solid transparent';
+            flagCn.style.border = lang === 'cn' ? '2px solid #1976d2' : '2px solid transparent';
+        }
+        flagEn.addEventListener('click', () => setLang('en'));
+        flagCn.addEventListener('click', () => setLang('cn'));
     </script>
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-E5SGRY335D"></script>
