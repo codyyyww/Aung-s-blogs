@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="description" content="Sai Anung Say's Portfolio - Sales & Marketing Manager">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">Sai Anung Say</a>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Content goes here -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Hello, I'm Sai Anung Say (Say)</h1>
+                <p>I'm a Sales & Marketing Manager with a passion for connecting people and driving business growth through creative strategies and digital solutions.</p>
+                <a href="mailto:ookk1520@gmail.com" class="btn-primary" target="_blank">Contact Me</a>
+            </div>
+            <div class="hero-photo">
+                <img src="logo1.jpg" alt="Sai Anung Say" style="width:180px; height:180px; border-radius:50%; box-shadow:0 4px 16px rgba(0,0,0,0.12); background:#fff; object-fit:cover;">
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="content-section active">
+        <div class="container about-rotator">
+            <div class="about-page about-page-0 active">
+                <h2>About Me</h2>
+                <p>
+                    I am Sai Anung Say (nick name: Say), a Sales & Marketing Manager with experience in building brands, leading teams, and delivering results in competitive markets. I enjoy collaborating, solving business challenges, and learning new trends in marketing and sales.
+                </p>
+            </div>
+            <div class="about-page about-page-1">
+                <h2>Skills</h2>
+                <ul>
+                    <li>Strategic Planning</li>
+                    <li>Digital Marketing</li>
+                    <li>SEO & SEM</li>
+                    <li>Content Creation</li>
+                    <li>Data Analysis</li>
+                </ul>
+            </div>
+            <div class="about-page about-page-2">
+                <h2>Interests</h2>
+                <p>
+                    I love exploring new marketing technologies, reading about industry trends, and hiking in nature. I'm also interested in AI and how it's shaping the future of business.
+                </p>
+            </div>
+        </div>
+        <div class="about-indicators">
+            <span class="about-dot active"></span>
+            <span class="about-dot"></span>
+            <span class="about-dot"></span>
+        </div>
+    </section>
+
+    <section id="gallery" class="content-section">
+        <div class="container gallery-rotator">
+            <div class="gallery-page gallery-page-0 active">
+                <img src="gallery1.jpg" alt="Gallery Photo 1" class="gallery-photo" data-full="gallery1.jpg">
+                <p>Photo 1: Team building event at the annual sales summit.</p>
+            </div>
+            <div class="gallery-page gallery-page-1">
+                <img src="gallery2.jpg" alt="Gallery Photo 2" class="gallery-photo" data-full="gallery2.jpg">
+                <p>Photo 2: Presenting at a marketing conference in 2024.</p>
+            </div>
+            <div class="gallery-page gallery-page-2">
+                <img src="gallery3.jpg" alt="Gallery Photo 3" class="gallery-photo" data-full="gallery3.jpg">
+                <p>Photo 3: Launching a new product campaign.</p>
+            </div>
+            <div class="gallery-page gallery-page-3">
+                <img src="gallery4.jpg" alt="Gallery Photo 4" class="gallery-photo" data-full="gallery4.jpg">
+                <p>Photo 4: Meeting with international partners.</p>
+            </div>
+            <div class="gallery-page gallery-page-4">
+                <img src="gallery5.jpg" alt="Gallery Photo 5" class="gallery-photo" data-full="gallery5.jpg">
+                <p>Photo 5: Coordinating a digital marketing workshop.</p>
+            </div>
+            <div class="gallery-page gallery-page-5">
+                <img src="gallery6.jpg" alt="Gallery Photo 6" class="gallery-photo" data-full="gallery6.jpg">
+                <p>Photo 6: Celebrating a successful sales quarter.</p>
+            </div>
+            <div class="gallery-page gallery-page-6">
+                <img src="gallery7.jpg" alt="Gallery Photo 7" class="gallery-photo" data-full="gallery7.jpg">
+                <p>Photo 7: Networking at a business expo.</p>
+            </div>
+        </div>
+        <div class="gallery-indicators">
+            <span class="gallery-dot active"></span>
+            <span class="gallery-dot"></span>
+            <span class="gallery-dot"></span>
+            <span class="gallery-dot"></span>
+            <span class="gallery-dot"></span>
+            <span class="gallery-dot"></span>
+            <span class="gallery-dot"></span>
+        </div>
+        <div id="gallery-fullscreen" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.92); z-index:2000; align-items:center; justify-content:center;">
+            <img id="gallery-full-img" src="" alt="Full Photo" style="max-width:96vw; max-height:96vh; border-radius:1.5rem; box-shadow:0 8px 48px rgba(0,0,0,0.4);">
+        </div>
+    </section>
+
+    <section id="contact" class="content-section">
+        <div class="container">
+            <h2>Contact</h2>
+            <p>Email: <a href="ookk1520@gmail.com">ookk1520@gmail.com</a></p>
+            <!-- You can add a contact form here if you like -->
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Sai Anung Say. All rights reserved.</p>
+    </footer>
+
+    <div id="chat-bubble" style="position: fixed; bottom: 40px; right: 40px; z-index: 9999; cursor: grab;">
+        <div id="chat-bubble-inner" style="background: #1976d2; color: #fff; border-radius: 50%; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 16px rgba(0,0,0,0.2); font-size: 2rem;">
+            💬
+        </div>
+        <div id="chat-bubble-tooltip" style="display:none; position:absolute; bottom:70px; right:0; background:#222; color:#fff; padding:6px 14px; border-radius:8px; font-size:1rem;">
+            Click to open chat
+        </div>
+    </div>
+    <div id="chat-window" style="display:none; position:fixed; bottom:110px; right:40px; width:90vw; max-width:400px; height:70vh; background:#fff; border-radius:16px; box-shadow:0 4px 32px rgba(0,0,0,0.25); z-index:10000; overflow:hidden;">
+        <div style="background:#1976d2; color:#fff; padding:0.75rem 1rem; display:flex; align-items:center; justify-content:space-between;">
+            <span>ChatFrontend</span>
+            <button id="close-chat-window" style="background:none; border:none; color:#fff; font-size:1.5rem; cursor:pointer;">&times;</button>
+        </div>
+        <iframe src="https://chatfrontend111889.netlify.app/" style="width:100%; height:calc(100% - 48px); border:none;"></iframe>
+    </div>
+    <script>
+        // Section animation
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                const targetId = this.getAttribute('href').replace('#', '');
+                const sections = document.querySelectorAll('.content-section');
+                sections.forEach(section => {
+                    if (section.id === targetId) {
+                        section.classList.add('active');
+                    } else {
+                        section.classList.remove('active');
+                    }
+                });
+            });
+        });
+
+        // Draggable chat bubble with touch and click support
+        const chatBubble = document.getElementById('chat-bubble');
+        const chatTooltip = document.getElementById('chat-bubble-tooltip');
+        const chatWindow = document.getElementById('chat-window');
+        const closeChatWindow = document.getElementById('close-chat-window');
+        let isDragging = false, offsetX = 0, offsetY = 0, startX = 0, startY = 0, moved = false;
+
+        function clamp(val, min, max) {
+            return Math.max(min, Math.min(max, val));
+        }
+
+        // Mouse events
+        chatBubble.addEventListener('mousedown', function(e) {
+            isDragging = true;
+            moved = false;
+            startX = e.clientX;
+            startY = e.clientY;
+            offsetX = e.clientX - chatBubble.getBoundingClientRect().left;
+            offsetY = e.clientY - chatBubble.getBoundingClientRect().top;
+            chatBubble.style.cursor = 'grabbing';
+            e.preventDefault();
+        });
+        document.addEventListener('mousemove', function(e) {
+            if (isDragging) {
+                const dx = e.clientX - startX;
+                const dy = e.clientY - startY;
+                if (Math.abs(dx) > 5 || Math.abs(dy) > 5) moved = true;
+                const bubbleWidth = chatBubble.offsetWidth;
+                const bubbleHeight = chatBubble.offsetHeight;
+                const x = clamp(e.clientX - offsetX, 0, window.innerWidth - bubbleWidth);
+                const y = clamp(e.clientY - offsetY, 0, window.innerHeight - bubbleHeight);
+                chatBubble.style.left = x + 'px';
+                chatBubble.style.top = y + 'px';
+                chatBubble.style.right = 'auto';
+                chatBubble.style.bottom = 'auto';
+            }
+        });
+        document.addEventListener('mouseup', function(e) {
+            if (isDragging && !moved) {
+                if (window.innerWidth <= 768) {
+                    chatWindow.style.display = 'block';
+                } else {
+                    window.open('https://chatfrontend111889.netlify.app/', '_blank', 'width=400,height=600');
+                }
+            }
+            isDragging = false;
+            chatBubble.style.cursor = 'grab';
+        });
+
+        // Touch events
+        chatBubble.addEventListener('touchstart', function(e) {
+            isDragging = true;
+            moved = false;
+            const touch = e.touches[0];
+            startX = touch.clientX;
+            startY = touch.clientY;
+            offsetX = touch.clientX - chatBubble.getBoundingClientRect().left;
+            offsetY = touch.clientY - chatBubble.getBoundingClientRect().top;
+            chatBubble.style.cursor = 'grabbing';
+            e.preventDefault();
+        }, { passive: false });
+        document.addEventListener('touchmove', function(e) {
+            if (isDragging) {
+                const touch = e.touches[0];
+                const dx = touch.clientX - startX;
+                const dy = touch.clientY - startY;
+                if (Math.abs(dx) > 5 || Math.abs(dy) > 5) moved = true;
+                const bubbleWidth = chatBubble.offsetWidth;
+                const bubbleHeight = chatBubble.offsetHeight;
+                const x = clamp(touch.clientX - offsetX, 0, window.innerWidth - bubbleWidth);
+                const y = clamp(touch.clientY - offsetY, 0, window.innerHeight - bubbleHeight);
+                chatBubble.style.left = x + 'px';
+                chatBubble.style.top = y + 'px';
+                chatBubble.style.right = 'auto';
+                chatBubble.style.bottom = 'auto';
+                e.preventDefault();
+            }
+        }, { passive: false });
+        document.addEventListener('touchend', function(e) {
+            if (isDragging && !moved) {
+                if (window.innerWidth <= 768) {
+                    chatWindow.style.display = 'block';
+                } else {
+                    window.open('https://chatfrontend111889.netlify.app/', '_blank', 'width=400,height=600');
+                }
+            }
+            isDragging = false;
+            chatBubble.style.cursor = 'grab';
+        });
+
+        // Tooltip on hover
+        chatBubble.addEventListener('mouseenter', () => chatTooltip.style.display = 'block');
+        chatBubble.addEventListener('mouseleave', () => chatTooltip.style.display = 'none');
+
+        // Close chat window
+        closeChatWindow.addEventListener('click', function() {
+            chatWindow.style.display = 'none';
+        });
+
+        // Hamburger menu toggle
+        const navToggle = document.querySelector('.nav-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        navToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Optional: Close menu after clicking a link (for better UX)
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', function() {
+                if (window.innerWidth <= 768) {
+                    navLinks.classList.remove('active');
+                }
+            });
+        });
+
+        // Google Analytics
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-E5SGRY335D');
+
+        // About section rotator
+        const aboutRotator = document.querySelector('.about-rotator');
+        const aboutPages = document.querySelectorAll('.about-page');
+        const aboutDots = document.querySelectorAll('.about-dot');
+        let aboutIndex = 0;
+        function updateAboutDots(idx) {
+            aboutDots.forEach((dot, i) => {
+                dot.classList.toggle('active', i === idx);
+            });
+        }
+        aboutRotator.addEventListener('click', () => {
+            // Remove active/prev classes
+            aboutPages[aboutIndex].classList.remove('active');
+            aboutPages[aboutIndex].classList.add('prev');
+            // Next index
+            aboutIndex = (aboutIndex + 1) % aboutPages.length;
+            // Set next as active
+            aboutPages[aboutIndex].classList.add('active');
+            updateAboutDots(aboutIndex);
+            // Remove prev from previous after animation
+            setTimeout(() => {
+                aboutPages.forEach((p, i) => {
+                    if (i !== aboutIndex) p.classList.remove('prev');
+                });
+            }, 700);
+        });
+        updateAboutDots(aboutIndex); // initialize
+
+        // Optional: Touch swipe support for mobile (swipe left to next page)
+        let touchStartX = null;
+        aboutRotator.addEventListener('touchstart', function(e) {
+            if (e.touches.length === 1) {
+                touchStartX = e.touches[0].clientX;
+            }
+        });
+        aboutRotator.addEventListener('touchend', function(e) {
+            if (touchStartX !== null && e.changedTouches.length === 1) {
+                const touchEndX = e.changedTouches[0].clientX;
+                if (touchStartX - touchEndX > 40) { // swipe left
+                    aboutRotator.click();
+                }
+                touchStartX = null;
+            }
+        });
+
+        // Gallery section rotator (like about section)
+        const galleryRotator = document.querySelector('.gallery-rotator');
+        const galleryPages = document.querySelectorAll('.gallery-page');
+        const galleryDots = document.querySelectorAll('.gallery-dot');
+        let galleryIndex = 0;
+        function updateGalleryDots(idx) {
+            galleryDots.forEach((dot, i) => {
+                dot.classList.toggle('active', i === idx);
+            });
+        }
+        galleryRotator.addEventListener('click', () => {
+            galleryPages[galleryIndex].classList.remove('active');
+            galleryPages[galleryIndex].classList.add('prev');
+            galleryIndex = (galleryIndex + 1) % galleryPages.length;
+            galleryPages[galleryIndex].classList.add('active');
+            updateGalleryDots(galleryIndex);
+            setTimeout(() => {
+                galleryPages.forEach((p, i) => {
+                    if (i !== galleryIndex) p.classList.remove('prev');
+                });
+            }, 700);
+        });
+        updateGalleryDots(galleryIndex);
+        // Touch swipe for gallery
+        let galleryTouchStartX = null;
+        galleryRotator.addEventListener('touchstart', function(e) {
+            if (e.touches.length === 1) {
+                galleryTouchStartX = e.touches[0].clientX;
+            }
+        });
+        galleryRotator.addEventListener('touchend', function(e) {
+            if (galleryTouchStartX !== null && e.changedTouches.length === 1) {
+                const touchEndX = e.changedTouches[0].clientX;
+                if (galleryTouchStartX - touchEndX > 40) {
+                    galleryRotator.click();
+                }
+                galleryTouchStartX = null;
+            }
+        });
+
+        // Gallery long tap to show full photo
+        const galleryFull = document.getElementById('gallery-fullscreen');
+        const galleryFullImg = document.getElementById('gallery-full-img');
+        let galleryLongPressTimer = null;
+        document.querySelectorAll('.gallery-photo').forEach(photo => {
+            // Mouse long press
+            photo.addEventListener('mousedown', function(e) {
+                galleryLongPressTimer = setTimeout(() => {
+                    galleryFullImg.src = photo.getAttribute('data-full');
+                    galleryFull.style.display = 'flex';
+                }, 500);
+            });
+            photo.addEventListener('mouseup', function(e) {
+                clearTimeout(galleryLongPressTimer);
+            });
+            photo.addEventListener('mouseleave', function(e) {
+                clearTimeout(galleryLongPressTimer);
+            });
+            // Touch long press
+            photo.addEventListener('touchstart', function(e) {
+                galleryLongPressTimer = setTimeout(() => {
+                    galleryFullImg.src = photo.getAttribute('data-full');
+                    galleryFull.style.display = 'flex';
+                }, 500);
+            }, {passive: true});
+            photo.addEventListener('touchend', function(e) {
+                clearTimeout(galleryLongPressTimer);
+            });
+            photo.addEventListener('touchmove', function(e) {
+                clearTimeout(galleryLongPressTimer);
+            });
+        });
+        galleryFull.addEventListener('click', function() {
+            galleryFull.style.display = 'none';
+            galleryFullImg.src = '';
+        });
+    </script>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-E5SGRY335D"></script>
+</body>
+</html>
