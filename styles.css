@@ -317,6 +317,40 @@ footer a:hover {
     }
 }
 
+/* Top row for logo and hamburger */
+.nav-top-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+}
+.nav-top-row .logo {
+    flex: 1 1 auto;
+    text-align: center;
+    margin: 0 auto;
+}
+.nav-top-row .nav-toggle {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 0;
+}
+@media (min-width: 769px) {
+    .nav-top-row {
+        justify-content: flex-start;
+    }
+    .nav-top-row .logo {
+        text-align: left;
+        margin: 0;
+    }
+    .nav-top-row .nav-toggle {
+        position: static;
+        transform: none;
+    }
+}
+
 a {
     color: #007acc;
     text-decoration: none;

@@ -10,20 +10,26 @@
 <body>
     <nav class="navbar">
         <div class="container">
-            <a href="#" class="logo">Sai Aung Say</a>
-            <div class="lang-switcher" style="position:absolute; top:16px; right:24px; display:flex; gap:8px; z-index:300;">
+            <div class="nav-top-row">
+                <a href="#" class="logo">Sai Aung Say</a>
+                <button class="nav-toggle" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+            <div class="lang-switcher desktop-only" style="position:absolute; top:16px; right:24px; display:flex; gap:8px; z-index:300;">
                 <img src="flag-en.png" alt="English" class="flag-btn" id="flag-en" style="width:32px; height:22px; cursor:pointer; border-radius:4px; border:2px solid #1976d2;">
                 <img src="flag-cn.png" alt="中文" class="flag-btn" id="flag-cn" style="width:32px; height:22px; cursor:pointer; border-radius:4px; border:2px solid transparent;">
             </div>
-            <button class="nav-toggle" aria-label="Toggle navigation">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
             <ul class="nav-links">
                 <li><a href="#about" class="nav-about">About</a></li>
                 <li><a href="#gallery" class="nav-gallery">Gallery</a></li>
                 <li><a href="#contact" class="nav-contact">Contact</a></li>
+                <li class="lang-switcher-mobile mobile-only" style="display:none; flex-direction:row; gap:8px; align-items:center; padding:0.5rem 1.5rem;">
+                    <img src="flag-en.png" alt="English" class="flag-btn" id="flag-en-mobile" style="width:32px; height:22px; cursor:pointer; border-radius:4px; border:2px solid #1976d2;">
+                    <img src="flag-cn.png" alt="中文" class="flag-btn" id="flag-cn-mobile" style="width:32px; height:22px; cursor:pointer; border-radius:4px; border:2px solid transparent;">
+                </li>
             </ul>
         </div>
     </nav>
@@ -141,12 +147,17 @@
     <section id="contact" class="content-section">
         <div class="container">
             <h2 class="contact-title">Contact</h2>
-            <p class="contact-desc-en">WeChat: <span style="font-weight:bold;">kyisem666</span></p>
-            <p class="contact-desc-cn" style="display:none;">微信：<span style="font-weight:bold;">kyisem666</span></p>
+            <p class="contact-desc-en">WeChat: <span id="wechat-id" style="font-weight:bold; color:#1976d2; cursor:pointer;">kyisem666</span></p>
+            <p class="contact-desc-cn" style="display:none;">微信：<span id="wechat-id-cn" style="font-weight:bold; color:#1976d2; cursor:pointer;">kyisem666</span></p>
             <!-- You can add a contact form here if you like -->
         </div>
     </section>
-
+    <div id="wechat-qr-modal" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.6); z-index:99999; align-items:center; justify-content:center;">
+        <div style="background:#fff; border-radius:16px; padding:2rem; box-shadow:0 8px 32px rgba(0,0,0,0.25); display:flex; flex-direction:column; align-items:center; max-width:90vw; max-height:90vh;">
+            <img src="wechatqr.jpg" alt="WeChat QR" style="width:220px; max-width:80vw; height:auto; border-radius:12px; box-shadow:0 2px 12px rgba(0,0,0,0.12); margin-bottom:1rem;">
+            <button id="close-wechat-qr" style="background:#1976d2; color:#fff; border:none; border-radius:8px; padding:0.5rem 1.5rem; font-size:1rem; cursor:pointer;">Close</button>
+        </div>
+    </div>
     <footer>
         <p>&copy; 2025 Sai Aung Say. All rights reserved.</p>
     </footer>
@@ -420,12 +431,46 @@
             document.querySelector('.hero-desc-cn').style.display = lang === 'cn' ? '' : 'none';
             document.querySelector('.hero-contact-en').style.display = lang === 'en' ? '' : 'none';
             document.querySelector('.hero-contact-cn').style.display = lang === 'cn' ? '' : 'none';
-            // Flag highlight
+            // Flag highlight (desktop)
             flagEn.style.border = lang === 'en' ? '2px solid #1976d2' : '2px solid transparent';
             flagCn.style.border = lang === 'cn' ? '2px solid #1976d2' : '2px solid transparent';
+            // Flag highlight (mobile)
+            var flagEnMobile = document.getElementById('flag-en-mobile');
+            var flagCnMobile = document.getElementById('flag-cn-mobile');
+            if (flagEnMobile && flagCnMobile) {
+                flagEnMobile.style.border = lang === 'en' ? '2px solid #1976d2' : '2px solid transparent';
+                flagCnMobile.style.border = lang === 'cn' ? '2px solid #1976d2' : '2px solid transparent';
+            }
         }
         flagEn.addEventListener('click', () => setLang('en'));
         flagCn.addEventListener('click', () => setLang('cn'));
+
+        // Responsive language switcher logic
+        function updateLangSwitcherVisibility() {
+            if (window.innerWidth <= 768) {
+                document.querySelector('.lang-switcher.desktop-only').style.display = 'none';
+                document.querySelector('.lang-switcher-mobile.mobile-only').style.display = 'flex';
+            } else {
+                document.querySelector('.lang-switcher.desktop-only').style.display = 'flex';
+                document.querySelector('.lang-switcher-mobile.mobile-only').style.display = 'none';
+            }
+        }
+        window.addEventListener('resize', updateLangSwitcherVisibility);
+        document.addEventListener('DOMContentLoaded', updateLangSwitcherVisibility);
+        // Language switcher event listeners for mobile
+        document.getElementById('flag-en-mobile').addEventListener('click', () => setLang('en'));
+        document.getElementById('flag-cn-mobile').addEventListener('click', () => setLang('cn'));
+
+        // WeChat QR modal logic
+        function showWechatQR() {
+            document.getElementById('wechat-qr-modal').style.display = 'flex';
+        }
+        function hideWechatQR() {
+            document.getElementById('wechat-qr-modal').style.display = 'none';
+        }
+        document.getElementById('wechat-id').onclick = showWechatQR;
+        document.getElementById('wechat-id-cn').onclick = showWechatQR;
+        document.getElementById('close-wechat-qr').onclick = hideWechatQR;
     </script>
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-E5SGRY335D"></script>
